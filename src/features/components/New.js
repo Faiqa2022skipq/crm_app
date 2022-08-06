@@ -1,12 +1,12 @@
 import { View, Text } from "react-native";
 import Form from "./Form";
-// import { useNewCustomer } from "../../hooks";
+import { useNewCustomer } from '../hooks'
 
 const New = () => {
-//   const { onSubmit } = useNewCustomer();
+ const { onSubmit } = useNewCustomer();
   return (
     <View>
-      <Form  />
+      <Form onSubmit={onSubmit} />
     </View>
   );
 };

@@ -4,14 +4,14 @@ import { View, Text, StyleSheet, ScrollView, SafeAreaView } from "react-native";
 import Button from "../components/Button";
 
 import Loading from '../components/Loading';
-// import {
-//   useClearCustomers,
-//   useLoadCustomers,
-// } from "../features/customer/hooks";
+import {
+  useClearCustomers,
+  useLoadCustomers,
+} from "../features/hooks";
 
 function List() {
-//   const customers = useLoadCustomers();
-//   const { onClear } = useClearCustomers();
+  const customers = useLoadCustomers();
+  const { onClear } = useClearCustomers();
    const { navigate } = useNavigation();
 
   
@@ -29,27 +29,27 @@ function List() {
 
          <Button
           text="South East"
-        //   onPress={() => {
-        //     navigate("ListRegions");
-        //   }}
+          onPress={() => {
+            navigate("ListByRegions", {  region: 'South East' });
+          }}
         />
            <Button
           text="South West"
-        //   onPress={() => {
-        //     navigate("ListRegions");
-        //   }}
+          onPress={() => {
+            navigate("ListByRegions",  { region: 'South West' });
+          }}
         />
            <Button
           text="Middle East"
-        //   onPress={() => {
-        //     navigate("ListRegions");
-        //   }}
+          onPress={() => {
+            navigate("ListByRegions",  { region: 'Middle East' });
+          }}
         />
            <Button
           text="Middle West"
-        //   onPress={() => {
-        //     navigate("ListRegions");
-        //   }}
+          onPress={() => {
+            navigate("ListByRegions",  { region: 'Middle West' });
+          }}
         />
       </ScrollView>
     </SafeAreaView>

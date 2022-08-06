@@ -1,20 +1,15 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import Navigation from './src/Navigation';
+import { Provider } from "react-redux";
+import initializeStore from "./src/store";
+import Navigation from "./src/Navigation";
 
-export default function App() {
+const store = initializeStore();
+
+const App = () => {
   return (
-    <Navigation/>
-    
-  
+    <Provider store={store}>
+      <Navigation />
+    </Provider>
   );
-}
+};
 
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: '#fff',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-// });
+export default App;
