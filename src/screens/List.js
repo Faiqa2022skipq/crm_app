@@ -3,18 +3,11 @@ import React from "react";
 import { View, Text, StyleSheet, ScrollView, SafeAreaView } from "react-native";
 import Button from "../components/Button";
 
-import Loading from '../components/Loading';
-import {
-  useClearCustomers,
-  useLoadCustomers,
-} from "../features/hooks";
 
 function List() {
-  const customers = useLoadCustomers();
-  const { onClear } = useClearCustomers();
-   const { navigate } = useNavigation();
+  const { navigate } = useNavigation();
 
-  
+
   return (
     <SafeAreaView>
       <ScrollView>
@@ -27,28 +20,28 @@ function List() {
         <Text> List of Regions:</Text>
         <Text> Select Region to select:</Text>
 
-         <Button
+        <Button
           text="South East"
           onPress={() => {
-            navigate("ListByRegions", {  region: 'South East' });
+            navigate("ListByRegions", { region: 'South East' });
           }}
         />
-           <Button
+        <Button
           text="South West"
           onPress={() => {
-            navigate("ListByRegions",  { region: 'South West' });
+            navigate("ListByRegions", { region: 'South West' });
           }}
         />
-           <Button
+        <Button
           text="Middle East"
           onPress={() => {
-            navigate("ListByRegions",  { region: 'Middle East' });
+            navigate("ListByRegions", { region: 'Middle East' });
           }}
         />
-           <Button
+        <Button
           text="Middle West"
           onPress={() => {
-            navigate("ListByRegions",  { region: 'Middle West' });
+            navigate("ListByRegions", { region: 'Middle West' });
           }}
         />
       </ScrollView>

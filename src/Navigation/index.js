@@ -7,6 +7,7 @@ import ListByRegions from "../screens/ListByRegions";
 import Welcome from "../screens/Welcome";
 
 
+
 const Stack = createNativeStackNavigator();
 
 const Navigation = () => {
@@ -15,6 +16,7 @@ const Navigation = () => {
       <Stack.Navigator initialRouteName={"Welcome"}>
         <Stack.Screen name="Welcome" component={Welcome} />
         <Stack.Screen name="ListRegions" component={List} />
+      
         <Stack.Screen name="Add Customer" component={NewScreen} />
         <Stack.Screen name="Edit Customer" component={EditScreen} />
         <Stack.Screen name="ListByRegions" component={ListByRegions} />

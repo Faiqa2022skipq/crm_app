@@ -8,7 +8,7 @@ const CustomerList = () => {
   const { params } = useRoute();
   const region = useSelector((s) =>
     s.customer.list.regions
-    // .find((r) => r.id === params.regionId)
+    .find((r) => r.id === params.regionId)
   );
   const customerList = useCustomersListByRegion(region);
 
