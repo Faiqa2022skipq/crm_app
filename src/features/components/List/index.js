@@ -33,20 +33,4 @@ const CustomerList = () => {
 };
 
 export default CustomerList;
-// import React from 'react'
-// import { View, Text, FlatList } from "react-native";
 
-// const List = () => {
-//   return (
-  
-//     <View>
-//         <Text>FirstName: Faiqa </Text>
-//         <Text>LastName:  Arshad</Text>
-//         <Text>Active:  Active</Text>
-//         <Text>Region:  South West</Text>
-
-//     </View>
-//   )
-// }
-
-// export default List
